@@ -1,0 +1,21 @@
+Package: scalefreeForest
+Type: Package
+Title: Scale-free forest density estimation
+Version: 0.1.0
+Author: Zhe Liu <zheliu@uchicago.edu>
+Maintainer: Zhe Liu <zheliu@uchicago.edu>
+Description: Provides a nonparametric method for estimating scale-free graphical
+    models. To avoid the usual Gaussian assumption, we restrict the graph to be
+    a forest and build on the work of forest density estimation. The method is
+    motivated from a Bayesian perspective and is equivalent to finding the maximum
+    spanning tree of a weighted graph with a log degree penalty. We solve the
+    optimization problem via a minorize-maximization procedure with Kruskal's
+    algorithm.
+License: GPL-3
+LazyData: TRUE
+Depends:
+    R (>= 3.0.0)
+Imports:
+    igraph,
+    MASS
+RoxygenNote: 5.0.1
