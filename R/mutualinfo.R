@@ -22,7 +22,7 @@ mutual.info <- function (x, m, range = NULL) {
     h1[j] <- bandwidth.nrd2d(x[, j], is1D = T)
   }
   for (j in c(1:(d - 1))) {
-    for (k in c((j + 1):d)){
+    for (k in c((j + 1):d)) {
       cur_K2 <- kde2d(x[, j], x[, k], n = m, h = c(h2[j], h2[k]) * 4)
       cur_K2_val <- cur_K2$z + 1e-200
       if (is.null(range)) {

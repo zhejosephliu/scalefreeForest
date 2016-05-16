@@ -33,8 +33,7 @@ scalefreeForest <- function (xtrain, xheld, lambda = seq(0.005, 0.15, 0.005), it
                 loglike <- c(loglike, max(temp$loglike.fde))
                 adj[[length(adj) + 1]] <- temp$seq_g[[which.max(temp$loglike.fde)]]
                 break
-            }
-            else {
+            } else {
                 forest <- temp
             }
         }
